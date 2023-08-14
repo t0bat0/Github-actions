@@ -19,6 +19,6 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: |
           echo "Building Docker image..."
-          docker build -t mi_usuario/mi_app:$GITHUB_SHA .
+          docker build -t tobatostudent/mi_app:$GITHUB_SHA .
           docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
           docker push mi_usuario/mi_app:$GITHUB_SHA
